@@ -12,15 +12,138 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // fill pages array with projects.
     projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+    projects.push("Rob-bot");
+    projects.push("Javafx Web Browser");
+    projects.push("Valentines Day Card");
+
 
     // Create table of contents based on projects array.
     function tableOfContents() {
         let list = document.getElementById("table-of-contents");
 
         // Loop through the items
-        for (let i=0; i<projects.length; i++) {
+        for (let i = 0; i < projects.length; i++) {
             let li = document.createElement('li'); // create list element.
-            li.innerText = projects[i] + ' - ' + (i+1); // update text with name and page #.
+            li.innerText = projects[i] + ' - ' + (i + 1); // update text with name and page #.
             list.appendChild(li); // add list item to list.
         }
     }
@@ -39,20 +162,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         activate(tab3); // Switch tab to active
     });
 
-    const toTheTop = () => {
+    topBtn.addEventListener('click', () => {
+        description.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // Smooth scroll effect
+        });
+    })
+
+
+    // Add event listener for scroll on the description element
+    description.addEventListener('scroll', () => {
         const scrollPosition = description.scrollTop;
 
-        const descriptionTop = description.scrollTop;
-
-        // if user scrolls past 100px then show button.
+        // If the user scrolls past 100px, show the button.
         if (scrollPosition > 100) {
             topBtn.style.visibility = "visible";
         } else {
             topBtn.style.visibility = "hidden";
         }
-    };
-
-    description.addEventListener('to-top', toTheTop);
+    });
 
     function activate(tab) {
         // Change info on description
@@ -141,7 +269,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 break;
 
             case tab3:
-                console.log(currentPage);
                 switch (currentPage) {
                     case 0: // table of contents
                         description.innerHTML = `
@@ -151,18 +278,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         <ul id="table-of-contents">
                         </ul>
 
-                        <div>
-                            <button id="forward">Next</button>
-                            <button id="back">Back</button>
-                        </div>
                     `;
-                    tableOfContents();
-                    break;
+                        tableOfContents();
+                        break;
                     case 1: // Rob-bot project.
                         description.innerHTML = ` 
                             <h1>Rob-Bot</h1>
                         `
                         break;
+                    case 2:
+                        description.innerHTML = `
+                            <h1>Javafx Web Browser</h1>
+                        `
+                    case 3:
+                        description.innerHTML = `
+                            <h1>Valentines Day Card</h1>
+                        `
                     default: // go to table of contents.
                         currentPage = 0;
                 }
