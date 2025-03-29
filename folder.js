@@ -4,8 +4,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const tab3 = document.getElementById('projects-tab');
     const paper = document.getElementById('paper');
     const description = document.getElementById('description');
-    const pageCounter = document.getElementById('page');
-    let currentPage = 1;
+    const topBtn = document.getElementById('top');
+
+    // Project variables
+    const projects = ["tableOfContents"]; // first page is table of contents.
+    let currentPage = 0; // index of the current project page.
+
+    // fill pages array with projects.
+    projects.push("Rob-bot");
+
+    // Create table of contents based on projects array.
+    function tableOfContents() {
+        let list = document.getElementById("table-of-contents");
+
+        // Loop through the items
+        for (let i=0; i<projects.length; i++) {
+            let li = document.createElement('li'); // create list element.
+            li.innerText = projects[i] + ' - ' + (i+1); // update text with name and page #.
+            list.appendChild(li); // add list item to list.
+        }
+    }
 
     activate(tab1); // Make tab1 the default starting tab
 
@@ -21,28 +39,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
         activate(tab3); // Switch tab to active
     });
 
-    const updatePageCounter = () => {
+    const toTheTop = () => {
         const scrollPosition = description.scrollTop;
-        const containerHeight = description.clientHeight;
-        const newPage = Math.floor(scrollPosition / containerHeight) + 1;
 
         const descriptionTop = description.scrollTop;
-        paper.style.backgroundPositionY = -descriptionTop + 'px';
 
-
-        if (newPage !== currentPage) {
-            currentPage = newPage;
-            pageCounter.innerText = `Page: ${currentPage}`;
+        // if user scrolls past 100px then show button.
+        if (scrollPosition > 100) {
+            topBtn.style.visibility = "visible";
+        } else {
+            topBtn.style.visibility = "hidden";
         }
     };
 
-    description.addEventListener('scroll', updatePageCounter);
+    description.addEventListener('to-top', toTheTop);
 
     function activate(tab) {
         // Change info on description
         changePaper(tab); // Change html based on what tab is clicked
-        currentPage = 1;
-        pageCounter.innerText = `Page: ${currentPage}`;
     }
 
     function changePaper(tab) {
@@ -53,10 +67,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         <h1>Welcome</h1>
                     </div>
                     <p>
-                        Welcome to my professional portfolio! I’m thrilled to have you here. 
-                        This site is a showcase of my journey, skills, and the projects I’m passionate about. 
+                        Welcome to my professional portfolio! I'm thrilled to have you here. 
+                        This site is a showcase of my journey, skills, and the projects I'm passionate about. 
                         Dive into the "About Me" section to learn more about my background, experiences, and what drives me. 
-                        Explore the "Projects" section to see examples of my work and the impact I’ve made. 
+                        Explore the "Projects" section to see examples of my work and the impact I've made. 
                         I hope this glimpse into my professional world sparks your interest and leads to exciting opportunities for us to collaborate. Enjoy your visit!
                     </p>
                 `;
@@ -72,6 +86,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         <p>Robby L. Johnson III</p>
                         <p>Email: <a href="mailto:johnsonrobby1388@gmail.com">johnsonrobby1388@gmail.com</a></p>
                         <p>Phone: <a href="tel:(810) 300-0115">(810) 300-0115</a></p>
+                        <p>Github: <a href="https://github.com/robbyj1388"> robbyj1388</a></p>
                         <h2>Education</h2>
                         <div>
                             <h3>Michigan Technological University</h3>
@@ -126,121 +141,31 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 break;
 
             case tab3:
-                description.innerHTML = `
-                    <div id="chapter">
-                        <h1>Table of Projects</h1>
-                    </div>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------------------------------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
-                    <p>Project Title -------------------- 1pg</p>
+                console.log(currentPage);
+                switch (currentPage) {
+                    case 0: // table of contents
+                        description.innerHTML = `
+                        <div id="chapter">
+                            <h1>Table of Projects</h1>
+                        </div>
+                        <ul id="table-of-contents">
+                        </ul>
 
-                `;
+                        <div>
+                            <button id="forward">Next</button>
+                            <button id="back">Back</button>
+                        </div>
+                    `;
+                    tableOfContents();
+                    break;
+                    case 1: // Rob-bot project.
+                        description.innerHTML = ` 
+                            <h1>Rob-Bot</h1>
+                        `
+                        break;
+                    default: // go to table of contents.
+                        currentPage = 0;
+                }
                 break;
         }
     }
