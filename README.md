@@ -18,11 +18,10 @@ To run this project locally:
    cd resume-site
 
 Install dependencies
-    npm install
+npm install
 
 Start the dev server
-
-    npm run dev
+npm run dev
 
 📦 Build for Production
 
@@ -46,7 +45,6 @@ You can then preview the build with:
 
     🔄 Rotate tab functionality
 
-
 🌐 Deployment
 
 You can deploy the site using GitHub Pages, Netlify, or any static host:
@@ -64,5 +62,3 @@ For GitHub Pages:
 Created and maintained by Robby L. Johnson.
 
 Feel free to fork the repo or reach out if you'd like to collaborate.
-
-
