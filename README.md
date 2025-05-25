@@ -14,10 +14,8 @@ This is a personal resume website built with [Vite](https://vitejs.dev/) and mod
 To run this project locally:
 
 1. **Clone the repo**
-   ```bash
    git clone https://github.com/robbyj1388/resume-site.git
    cd resume-site
-
 
 Install dependencies
     npm install
@@ -64,6 +62,7 @@ For GitHub Pages:
 🙋 About the Developer
 
 Created and maintained by Robby L. Johnson.
+
 Feel free to fork the repo or reach out if you'd like to collaborate.
 
 
