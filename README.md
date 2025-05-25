@@ -18,25 +18,23 @@ To run this project locally:
    git clone https://github.com/robbyj1388/resume-site.git
    cd resume-site
 
-    Install dependencies
 
-npm install
+Install dependencies
+    npm install
 
 Start the dev server
 
     npm run dev
 
-    Open your browser to http://localhost:5173
-
 📦 Build for Production
 
 To create an optimized production build:
 
-npm run build
+    npm run build
 
 You can then preview the build with:
 
-npm run preview
+    npm run preview
 
 📝 Features & To-Dos
 
@@ -49,6 +47,7 @@ npm run preview
     🔄 Improve "paper" background styling
 
     🔄 Rotate tab functionality
+
 
 🌐 Deployment
 
@@ -64,12 +63,7 @@ For GitHub Pages:
 
 🙋 About the Developer
 
-Created and maintained by [Your Name].
+Created and maintained by Robby L. Johnson.
 Feel free to fork the repo or reach out if you'd like to collaborate.
 
-TO-DO............................
-/ Page numbers on project tab need to be implimented
-/ Fix background of paper.
--Rotate tabs and make them touch the folder
--Add make it look like folder tab is pushed in when active with box-shadow
 
