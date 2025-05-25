@@ -75,11 +75,7 @@ export default function PortfolioTabs() {
 
   return (
     <div>
-      <div style={{ display: "flex", flexDirection: "column", position: "absolute", left: 0 }}>
-        <div className="trapezoid" onClick={() => setActiveTab("welcome")}>Welcome</div>
-        <div className="trapezoid" onClick={() => setActiveTab("about")}>About Me</div>
-        <div className="trapezoid" onClick={() => setActiveTab("projects")}>Projects</div>
-      </div>
+
       
       <div ref={descriptionRef}>
         {renderContent()}

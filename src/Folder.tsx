@@ -1,6 +1,6 @@
 // Folder.tsx
 import React, { ReactNode } from "react";
-import "./PortfolioTabs.css"; // Or put folder styles in their own CSS
+import "./Folder.css";
 
 type FolderProps = {
   children: ReactNode;
@@ -8,10 +8,19 @@ type FolderProps = {
 
 export default function Folder({ children }: FolderProps) {
   return (
-    <div className="folder">
-      <div className="paper" id="description">
-        {children}
+    <div className="container">
+      <div className="folder">
+        <div className="paper" id="description">
+          {children}
+        </div>
       </div>
+      
+      <div className="tabs">
+        <div className="trapezoid" onClick={() => setActiveTab("welcome")}>Welcome</div>
+        <div className="trapezoid" onClick={() => setActiveTab("about")}>About Me</div>
+        <div className="trapezoid" onClick={() => setActiveTab("projects")}>Projects</div>
+      </div>
+      
     </div>
   );
 }
