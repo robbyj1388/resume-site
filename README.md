@@ -18,15 +18,14 @@ To run this project locally:
    cd resume-site
 
 Install dependencies
-npm install
+    npm install
 
 Start the dev server
-npm run dev
+    npm run dev
 
 📦 Build for Production
 
 To create an optimized production build:
-
     npm run build
 
 You can then preview the build with:
