@@ -1,33 +1,31 @@
 /* PortfolioTabs.css */
-
-
 #chapter {
-  text-align: center;
-  font-family: 'Schoolbell', Arial, serif;
-  margin: 0;
+    text-align: center;
+    font-family: 'Schoolbell', Arial, serif;
+    margin: 0; /* Ensure no default margin */ 
 }
 
 #description {
-  background-attachment: local;
-  padding: 10px;
-  margin-top: 3vh;
-  max-height: 80vh;
-  font-family: 'Schoolbell', Arial, serif;
-  overflow-y: auto;
-  box-sizing: border-box;
+    background-attachment: local;
+    padding: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    max-height: 80vh; /* Adjust height based on padding and other content */
+    font-family: 'Schoolbell', Arial, serif;
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
 
-#top {
-  text-align: left;
-  visibility: hidden;
-  font-family: 'Schoolbell', Arial, serif;
-  margin: 0;
-  position: fixed;
+#page{
+    text-align: left;
+    font-family: 'Schoolbell', Arial, serif;
+    margin: 0; /* Ensure no default margin */
+    position: fixed;
 }
 
-/* Responsive adjustments */
+/* Example media query for smaller screens */
 @media (max-width: 600px) {
-  .folder {
-    background-color: blue;
-  }
+    .folder {
+        background-color: blue;
+        /* Adjust other styles as needed for smaller screens */
+    }
 }
