@@ -6,8 +6,6 @@ import PortfolioTabs from './PortfolioTabs.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Folder>
-      <PortfolioTabs />
-    </Folder>
+    <PortfolioTabs />
   </StrictMode>,
 )

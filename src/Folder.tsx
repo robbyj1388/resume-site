@@ -4,9 +4,10 @@ import "./Folder.css";
 
 type FolderProps = {
   children: ReactNode;
+  setActiveTab: (tab: string) => void;
 };
 
-export default function Folder({ children }: FolderProps) {
+export default function Folder({ children, setActiveTab }: FolderProps ) {
   return (
     <div className="container">
       <div className="folder">
@@ -16,9 +17,9 @@ export default function Folder({ children }: FolderProps) {
       </div>
       
       <div className="tabs">
-        <div className="trapezoid" onClick={() => setActiveTab("welcome")}>Welcome</div>
-        <div className="trapezoid" onClick={() => setActiveTab("about")}>About Me</div>
-        <div className="trapezoid" onClick={() => setActiveTab("projects")}>Projects</div>
+        <div className="trapezoid" onClick={() => {setActiveTab("welcome")}}>Welcome</div>
+        <div className="trapezoid" onClick={() => {setActiveTab("about")}}>About Me</div>
+        <div className="trapezoid" onClick={() => {setActiveTab("projects")}}>Projects</div>
       </div>
       
     </div>
