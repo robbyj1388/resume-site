@@ -7,7 +7,6 @@ const projectsList = ["tableOfContents", "Rob-bot", "Javafx Web Browser", "Valen
 
 export default function PortfolioTabs() {
   const [activeTab, setActiveTab] = useState("welcome");
-  const [currentPage, setCurrentPage] = useState(0);
   const descriptionRef = useRef<HTMLDivElement | null>(null);
   const topBtnRef = useRef<HTMLButtonElement | null>(null);
 

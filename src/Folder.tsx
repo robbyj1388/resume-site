@@ -1,4 +1,4 @@
-import React, { type ReactNode, useRef, useState, useEffect } from "react";
+import { type ReactNode, useRef, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Folder.css";
 
