@@ -50,7 +50,7 @@ export default function PortfolioTabs() {
                   <h1>Welcome</h1>
               </div>
               <p>
-                  Welcome to my professional portfolio! I'0m thrilled to have you here. 
+                  Welcome to my professional portfolio! I'm thrilled to have you here. 
                   This site is a showcase of my journey, skills, and the projects I'm passionate about. 
                   Dive into the "About Me" section to learn more about my background, experiences, and what drives me. 
                   Explore the "Projects" section to see examples of my work and the impact I've made. 
@@ -75,12 +75,12 @@ export default function PortfolioTabs() {
                 <div>
                     <h3>Michigan Technological University</h3>
                     <p><strong>Major Course of Study:</strong> Computer Programming, Minor in Cybersecurity</p>
-                    <p><strong>Expected Graduation:</strong> May 2026</p>
+                    <p><strong>Expected Graduation:</strong> April 2027</p>
                 </div>
                 <div>
                     <h3>Saint Clair County Community College</h3>
                     <p><strong>Major Course of Study:</strong> Computer Programming, Core College Classes</p>
-                    <p><strong>Graduation:</strong> Winter 2024</p>
+                    <p><strong>Graduation:</strong> June 2024</p>
                 </div>
                 <div>
                     <h3>St. Clair County Technical Education Center</h3>
@@ -103,7 +103,7 @@ export default function PortfolioTabs() {
                     <p><strong>Position:</strong> Full Time</p>
                     <p><strong>Description:</strong> I contract out to schools and help teachers and school staff with miscellaneous technical issues. Ranging from computer hardware issues to networking issues. During the summer, I lead a team of new part-time interns on helping out with summer projects, such as projector replacements and Chromebook management.</p>
                     <p><strong>Location:</strong> Marysville, Michigan 48040</p>
-                    <p><strong>Dates:</strong> 6/2023 - Current</p>
+                    <p><strong>Dates:</strong> June 2023 - Current</p>
                 </div>
               </div>
               <h2>Skills/Experience</h2>
