@@ -2,6 +2,11 @@
 
 This is a personal resume website built with [Vite](https://vitejs.dev/) and modern web development practices. It showcases your background, skills, experience, and projects in a sleek and interactive way.
 
+<img width="1919" height="887" alt="image" src="https://github.com/user-attachments/assets/cc9239ab-d37a-4259-b6d0-d150b36a352b" />
+<img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/d7dbd2d3-0696-414f-9d98-72f9134476bb" />
+<img width="1919" height="887" alt="image" src="https://github.com/user-attachments/assets/4211fba9-1db3-45a9-969a-8368f66a3aa8" />
+<img width="1919" height="890" alt="image" src="https://github.com/user-attachments/assets/a0f614bf-acb7-4995-bd4f-c03fa1296b57" />
+
 ## 🔧 Technologies Used
 
 - **HTML/CSS**
