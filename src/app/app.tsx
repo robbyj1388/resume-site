@@ -1,10 +1,10 @@
 import { AppProviders } from "./providers";
-import { Folder } from "../features/portfolio/components/Folder";
+import { Portfolio } from "../features/portfolio/Portfolio";
 
 export function App() {
   return (
     <AppProviders>
-      <Folder />
+      <Portfolio />
     </AppProviders>
   );
 }
