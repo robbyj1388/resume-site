@@ -1,11 +1,14 @@
-import { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
+import type { TabId } from "@/types/TabId";
 
-export const FolderTabs = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const handleTabChange = (_event: React.SyntheticEvent, newTab: number) => {
-    setActiveTab(newTab);
-    console.log("print");
+type FolderTabsProps = {
+  value: TabId;
+  onChange: (value: TabId) => void;
+};
+export const FolderTabs = ({ value, onChange }: FolderTabsProps) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newTab: TabId) => {
+    console.log(newTab);
+    onChange(newTab);
   };
 
   return (
@@ -17,7 +20,7 @@ export const FolderTabs = () => {
       }}
     >
       <Tabs
-        value={activeTab}
+        value={value}
         onChange={handleTabChange}
         aria-label="icon tabs example"
         sx={{
@@ -26,6 +29,8 @@ export const FolderTabs = () => {
             borderTopRightRadius: "10px",
             bgcolor: "#e0e0e0", // Inactive tab color
             mr: 1,
+            minWidth: 120,
+            minHeight: 44,
           },
           "& .Mui-selected": {
             bgcolor: "white", // Active tab color
@@ -33,8 +38,9 @@ export const FolderTabs = () => {
           },
         }}
       >
-        <Tab label="Tab One" />
-        <Tab label="Tab Two" />
+        <Tab value="welcome" label="Welcome" />
+        <Tab value="about" label="About" />
+        <Tab value="projects" label="Projects" />
       </Tabs>
     </Box>
   );

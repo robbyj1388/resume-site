@@ -2,6 +2,11 @@ import { Box } from "@mui/material";
 import { FolderTabs } from "../folder-tabs/FolderTabs";
 import { FolderBody } from "./components/FolderBody";
 import { Paper } from "./components/Paper";
+import { AboutMePage } from "../folder-tabs/components/AboutMePage";
+import { ProjectPage } from "../folder-tabs/components/ProjectPage";
+import { WelcomePage } from "../folder-tabs/components/WelcomePage";
+import { useState } from "react";
+import type { TabId } from "@/types/TabId";
 
 const folderMargin = {
   t: 5,
@@ -16,7 +21,14 @@ const folderPadding = {
   r: 5,
 };
 
+const TAB_CONTENT: Record<TabId, React.ReactNode> = {
+  welcome: <WelcomePage />,
+  about: <AboutMePage />,
+  projects: <ProjectPage />,
+};
+
 export const Folder = () => {
+  const [activeTab, setActiveTab] = useState<TabId>("welcome");
   return (
     <Box
       sx={{
@@ -35,9 +47,7 @@ export const Folder = () => {
       }}
     >
       <FolderBody>
-        <Paper>
-          <h1>TEST</h1>
-        </Paper>
+        <Paper>{TAB_CONTENT[activeTab]}</Paper>
       </FolderBody>
       <Box
         sx={{
@@ -47,7 +57,7 @@ export const Folder = () => {
           flexShrink: 0,
         }}
       >
-        <FolderTabs />
+        <FolderTabs value={activeTab} onChange={setActiveTab} />
       </Box>
     </Box>
   );
